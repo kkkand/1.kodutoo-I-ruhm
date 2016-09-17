@@ -58,6 +58,50 @@
 	}
 	
 	
+	
+	
+	// kas sugu on olemas
+	
+	$signupGenderError = "";
+	
+	
+	if ( isset ($_POST["signupGender"] ) ) {
+		
+		
+		if ( empty ( $_POST["signupGender"] ) ) {
+			
+			// oli gender, kuid see oli tühi
+			$signupGenderError = "See väli on kohustuslik";
+			
+			
+			
+		}
+		
+	}
+	
+	//kas vanus on olemas
+	
+	$signupVanusError = "";
+	
+	
+	if ( isset ($_POST["signupVanus"] ) ) {
+		
+		
+		if ( empty ( $_POST["signupVanus"] ) ) {
+			
+			// oli vanus, kuid see oli tühi
+			$signupVanusError = "See väli on kohustuslik";
+			
+			
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
 
 ?>
 
@@ -94,7 +138,14 @@
 	<br><br>
 	<input name="signupPassword" type ="password" placeholder="Parool"> <?php echo $signupPasswordError; ?>
 	<br><br>
+	<input name="signupGender" type ="Gender" placeholder="Mees/Naine"> <?php echo $signupGenderError; ?>
+	<br><br>
+	<input name="signupVanus" type ="Vanus" placeholder="Vanus"> <?php echo $signupVanusError; ?>
+	
+	
+	<br><br>
 	<input type ="submit" value="Logi sisse">
+	
 	
 	</form>
 	
